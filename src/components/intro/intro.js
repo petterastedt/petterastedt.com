@@ -8,7 +8,7 @@ const Intro = () => {
 
     new TypeIt('.intro .content-text', {
       strings: textContent,
-      speed: 35,
+      speed: 30,
       waitUntilVisible: true,
       lifeLike: true
     }).go()

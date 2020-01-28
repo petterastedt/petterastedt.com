@@ -9,7 +9,7 @@ const Portfolio = () => {
       <div className="content">
         <div className="content-text">
           <h2>PORTFOLIO</h2>
-          <p>A selection of personal projects I’ve created. For more examples see my <a href="https://bleech.de/en/" target="_blank" alt="Link to Github"  rel="noopener noreferrer" className="linkSpecial">github</a> page or <a href="#contact" alt="Send me a message" className="linkSpecial">send me a message</a> below. For professional work see the <a href="https://www.bleech.de" target="_blank" alt="Link to Github"  rel="noopener noreferrer" className="linkSpecial">bleech</a> website.</p>
+          <p>Below is a selection of personal projects I’ve created. For more examples see my <a href="https://github.com/petterastedt/" target="_blank" alt="Link to Github"  rel="noopener noreferrer" className="linkSpecial">github</a> page or <a href="#contact" alt="Send me a message" className="linkSpecial">send me a message</a>. For professional work see the <a href="https://www.bleech.de" target="_blank" alt="Link to Github"  rel="noopener noreferrer" className="linkSpecial">bleech</a> website.</p>
           <p className="subtitle"><strong>Technologies and frameworks I'm using:</strong></p>
         </div>
       </div>

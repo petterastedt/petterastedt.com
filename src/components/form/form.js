@@ -7,7 +7,7 @@ const Form = () => {
   })
 
   const [inputData, setInputData] = useState({
-    email: false,
+    email: null,
     subject: null,
     message: null
   })
@@ -60,6 +60,7 @@ const Form = () => {
             onBlur={(e) => checkEmail(e)}/>
 
             <div className={`check ${inputData.email && "check--isVisible"}`}></div>
+            <div className={`cross ${inputData.email === false && "cross--isVisible"}`}>+</div>
           </div>
 
         <label htmlFor="subject-input">Subject:</label>
