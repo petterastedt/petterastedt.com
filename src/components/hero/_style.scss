@@ -1,0 +1,64 @@
+.hero {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0 50px; // change to 125px?
+
+  @media (min-width: $breakpoint-desktop) {
+    padding: 40px 0 0;
+  }
+
+  @media (min-width: $breakpoint-desktop-wide) {
+    padding: 80px 0 0;
+  }
+
+  .content {
+    max-width: 950px;
+    margin: 0 auto;
+
+    &-title {
+      font-weight: 500;
+      margin: 0;
+
+      @media (max-width: $breakpoint-mobile-horizontal - 1) {
+        font-size: 34px;
+      }
+    }
+
+    &-divider {
+      align-self: flex-start;
+      background-color: $color-text;
+      height: 2px;
+      margin: 40px 0;
+      width: 40px;
+
+      @media (min-width: $breakpoint-mobile-horizontal) {
+        width: 100px;
+      }
+    }
+
+    &-subtitle {
+      font-size: 20px;
+      margin: 0;
+
+      @media (min-width: $breakpoint-mobile-horizontal) {
+        font-size: $font-size-medium-mobile;
+      }
+    }
+
+    .buttonWrapper {
+      display: flex;
+      justify-content: flex-start;
+      margin-top: 40px;
+      max-width: 950px;
+
+      @media (min-width: $breakpoint-mobile-horizontal) {
+        justify-content: flex-end;
+      }
+
+      button {
+        padding: 7px 12px;
+      }
+    }
+  }
+}

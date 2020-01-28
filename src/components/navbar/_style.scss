@@ -1,0 +1,105 @@
+.navbar {
+  cursor: pointer;
+  display: flex;
+  font-size: $font-size-small;
+  justify-content: space-between;
+  margin: 25px 0 50px;
+  padding: 9px;
+  transition: 0.3s width ease-in-out;
+  width: 30px;
+
+  @media (min-width: $breakpoint-mobile-horizontal) {
+    padding: 25px 20px;
+    width: calc(100% - 40px);
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    cursor: auto;
+    flex-direction: row;
+    width: unset;
+  }
+
+  &--isExpanded {
+    @media (max-width: $breakpoint-tablet - 1) {
+      width: calc(100% - 40px);
+    }
+  }
+
+  &-title {
+    display: none;
+
+    @media (min-width: $breakpoint-tablet) {
+      display: block;
+    }
+  }
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $breakpoint-mobile-horizontal) {
+    display: none;
+  }
+
+  &--isHidden {
+    @media (max-width: $breakpoint-tablet - 1) {
+      display: none;
+    }
+  }
+
+  &-line {
+    background-color: $color-text;
+    border-radius: 10px;
+    height: 3px;
+    margin-top: 5px;
+    width: 30px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+.list {
+  display: flex;
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+
+  @media (max-width: $breakpoint-tablet - 1) {
+    margin: 0 auto !important;
+  }
+
+  &--isHidden {
+    @media (max-width: $breakpoint-mobile-horizontal - 1) {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+
+  &-item a {
+    font-size: $font-size-small-mobile;
+    text-transform: uppercase;
+
+    @media (min-width: $breakpoint-mobile-horizontal) {
+      font-size: $font-size-small;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .separator {
+    padding: 0 3px;
+
+    @media (min-width: 360px) {
+      padding: 0 8px;
+    }
+
+    @media (min-width: $breakpoint-mobile-horizontal) {
+      padding: 0 15px;
+    }
+  }
+}
+

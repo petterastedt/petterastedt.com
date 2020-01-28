@@ -1,0 +1,58 @@
+.intro {
+  padding: 0px;
+
+  @media (min-width: $breakpoint-tablet-horizontal) {
+    padding: 0 80px;
+  }
+
+  &:before {
+    display: block;
+    content: '';
+    margin: -$component-spacing-mobile;
+    padding: $component-spacing-mobile;
+
+    @media (min-width: $breakpoint-tablet-horizontal) {
+      margin: -152px;
+      padding: 152px;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media (min-width: $breakpoint-tablet-horizontal) {
+      flex-direction: row;
+    }
+
+    &-image {
+      align-self: center;
+      height: 190px;
+      margin: 0 auto 40px;
+      width: 190px;
+
+      @media (min-width: $breakpoint-tablet-horizontal) {
+        flex-direction: row;
+        height: 250px;
+        margin-bottom: 0;
+        margin-right: 60px;
+        width: 250px;
+      }
+    }
+
+    &-text {
+      flex: 1;
+      font-size: 26px;
+      text-align: center;
+      margin: 0 auto;
+      max-width: 630px;
+
+      @media (min-width: $breakpoint-tablet-horizontal) {
+        // font-size: $font-size-medium;
+        text-align: left;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,15 @@
+.layout {
+  display: block;
+  margin: 0 auto;
+  max-width: $component-max-width;
+  overflow-x: hidden;
+  padding: 0 $gutter-mobile;
+
+  @media (min-width: $breakpoint-mobile-horizontal) {
+    padding: 0 $gutter-tablet;
+  }
+
+  @media (min-width: $breakpoint-tablet-horizontal) {
+    padding: 0 $gutter-desktop;
+  }
+}

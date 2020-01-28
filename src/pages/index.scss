@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata|Oswald&display=swap');
+@import '../assets/styles/variables';
+@import '../components/layout/style';
+@import '../components/navbar/style';
+@import '../components/hero/style';
+@import '../components/intro/style';
+@import '../components/portfolio/style';
+@import '../components/resume/style';
+@import '../components/form/style';
+@import '../components/footer/style';
+
+html {
+  font-family: $font-inconsolata;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 60rem;
+  margin: 3rem auto 0;
+
+  h1 {
+    color: #333;
+  }
+
+  p {
+    color: #aaa;
+  }
+}
+
+h1,
+.h1 {
+  font-size: $font-size-big-mobile;
+  font-weight: 500;
+  margin: 0  0 20px 0;
+  padding: 0;
+
+  @media (min-width: $breakpoint-tablet-horizontal) {
+    font-size: $font-size-big;
+  }
+}
+
+h2,
+.h2 {
+  font-size: 40px;
+  font-weight: 700;
+  margin: 0 0 60px 0;
+  padding: 0;
+
+  @media (min-width: $breakpoint-tablet-horizontal) {
+    font-size: 50px;
+  }
+}
+
+h3,
+.h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+
+  @media (min-width: $breakpoint-tablet-horizontal) {
+    font-size: 22px;
+  }
+}
+
+a {
+  color: $color-text;
+  text-decoration: none;
+}
+
+.box {
+  border: 2px solid;
+  box-shadow: 5px 6px 0px 0px rgba(50, 50, 50, 1);
+}
+
+.resetList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.componentSpacing {
+  margin: $component-spacing-mobile 0;
+
+  @media (min-width: $breakpoint-tablet-horizontal) {
+     margin: $component-spacing 0;
+  }
+}
+
+.button,
+button {
+  background-color: transparent;
+  cursor: pointer;
+  font-family: $font-oswald;
+  font-size: $font-size-small-mobile;
+  font-weight: 800;
+  padding: 8px 0;
+  transition: 0.3s all ease-in-out;
+
+  @media (min-width: $breakpoint-tablet-horizontal) {
+    font-size: 18px;
+  }
+
+  &:hover {
+    box-shadow: none;
+    transform: translate(5px, 6px);
+  }
+}
+
+.button-noHover {
+  box-shadow: none;
+  cursor: auto;
+
+  &:hover {
+    transform: none;
+  }
+}
+
+.linkSpecial {
+  color: $color-accent-dark;
+  font-weight: 800;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}

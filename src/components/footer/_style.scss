@@ -1,0 +1,34 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 40px;
+
+  @media (min-width: $breakpoint-tablet-horizontal) {
+    margin: -40px 0 40px;
+  }
+
+  &-text {
+    font-weight: 800;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  &-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &-link {
+    margin-right: 15px;
+    margin-top: 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
