@@ -1,5 +1,5 @@
 ---
-title: "futurity time capsule"
+title: "Futurity time capsule"
 featuredImage: project-3.jpg
 ---
 

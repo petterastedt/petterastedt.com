@@ -24,14 +24,15 @@ const Form = () => {
   const handleOnSubmit = async e => {
     e.preventDefault()
     const form = e.target;
-    setServerState({ submitting: true })
 
-    const postForm = await fetch('https://getform.io/f/fe0dc8a6-5e48-45f4-84c3-2f115ea31233', {
+    setServerState({submitting: true})
+
+    const postForm = await fetch('../../.netlify/getForm', {
       method: 'POST',
-      body: new FormData(form)
+      body: form
     })
 
-    if (!postForm) handleServerResponse(false, `${postForm.response.data.error} 😬`, form)
+    if (!postForm) handleServerResponse(false, `${postForm.response.data.error} `, form)
     else handleServerResponse(true, "The message was successfully sent!", form)
   }
 
