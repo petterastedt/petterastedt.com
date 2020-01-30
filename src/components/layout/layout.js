@@ -7,7 +7,7 @@ import Navbar from '../navbar/navbar'
 const Layout = ({ children }) => (
   <div className="layout">
     <Helmet
-      title='Petter Åstedt - Portfolio'
+      title='Petter Åstedt - Frontend web developer'
       meta={[
         {
           name: 'description',

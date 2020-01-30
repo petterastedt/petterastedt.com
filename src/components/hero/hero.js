@@ -9,7 +9,7 @@ const Hero = () => (
       </h1>
       <div className="content-divider"></div>
       <p className="content-subtitle">
-        Currently developing high quality components @ <a href="https://bleech.de/en/" target="_blank" alt="Link to Github"  rel="noopener noreferrer" className="linkSpecial">bleech</a>.
+        Currently developing high quality components @ <a href="https://bleech.de/en/" target="_blank" alt="Link to bleech.de"  rel="noopener noreferrer" className="linkSpecial">bleech</a>.
       </p>
       <div className="buttonWrapper">
         <button className="button box"><a href="#intro">Learn more</a></button>

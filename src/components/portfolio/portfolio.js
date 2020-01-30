@@ -28,7 +28,7 @@ const Portfolio = () => {
           <StaticQuery
             query={graphql`
               query {
-                allMarkdownRemark(sort: {fields: frontmatter___title}) {
+                allMarkdownRemark(sort: {order: ASC, fields: frontmatter___order}) {
                   edges {
                     node {
                       id

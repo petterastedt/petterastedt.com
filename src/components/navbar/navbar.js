@@ -8,6 +8,7 @@ const Navbar = () => {
     <nav
       className={`navbar box ${isExpanded && "navbar--isExpanded"}`}
       onClick={() => !isExpanded && toggleExpanded()}
+      onKeyDown={() => !isExpanded && toggleExpanded()}
     >
       <div className={`hamburger ${isExpanded && "hamburger--isHidden"}`}>
         <div className="hamburger-line"></div>

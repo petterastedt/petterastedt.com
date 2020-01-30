@@ -59,7 +59,6 @@ const Form = () => {
             required="required"
             id="email-input"
             onBlur={(e) => checkEmail(e)}/>
-
             <div className={`check ${inputData.email && "check--isVisible"}`}></div>
             <div className={`cross ${inputData.email === false && "cross--isVisible"}`}>+</div>
           </div>
