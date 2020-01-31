@@ -29,7 +29,10 @@ const Form = () => {
 
     const postForm = await fetch('/.netlify/functions/getform', {
       method: 'POST',
-      body: new FormData(form)
+      body: new FormData(form),
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      }
     })
 
     if (!postForm) handleServerResponse(false, `${postForm.response.data.error} `, form)
