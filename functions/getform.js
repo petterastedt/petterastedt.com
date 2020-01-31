@@ -1,3 +1,5 @@
+const fetch = require("node-fetch")
+
 exports.handler = async (event, context, callback) => {
   const pass = (body) => {
     callback(null, {
@@ -9,7 +11,7 @@ exports.handler = async (event, context, callback) => {
   try {
     let response = await fetch("https://getform.io/f/fe0dc8a6-5e48-45f4-84c3-2f115ea31233", {
       method: event.httpMethod,
-      body: new FormData(event.body)
+      body: event.body
     })
 
     let data = await response.json()
