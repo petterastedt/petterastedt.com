@@ -17,8 +17,6 @@ const Form = () => {
       submitting: false,
       status: { ok, msg }
     })
-
-    if (ok) form.reset()
   }
 
   const urlencodeFormData = (fd) => {
