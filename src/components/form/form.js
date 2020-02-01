@@ -40,9 +40,7 @@ const Form = () => {
       body: formUrlEncode
     })
 
-    const respJson = await postForm.json()
     console.log(postForm)
-    console.log(respJson)
 
     if (!postForm) handleServerResponse(false, `${postForm.response.data.error} `, form)
     else handleServerResponse(true, "The message was successfully sent!", form)

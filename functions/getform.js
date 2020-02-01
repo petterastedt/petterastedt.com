@@ -1,6 +1,6 @@
 const axios = require("axios")
 
-exports.handler = async (event, context, callback) => {
+exports.handler = (event, context, callback) => {
   const pass = (body) => {
     callback(null, {
       statusCode: 200,
