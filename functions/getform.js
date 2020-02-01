@@ -8,7 +8,7 @@ exports.handler = (event, context, callback) => {
     })
   }
 
-  axios(API_URL.process.env, {
+  axios(process.env.API_URL, {
     method: event.httpMethod,
     data: event.body
   })
