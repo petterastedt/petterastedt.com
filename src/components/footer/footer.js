@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => (
   <footer className="footer">
-    <div className="footer-text">Made with <span role="img" aria-label="Blue heart emoji">💙</span> in Berlin using Gatsby.js.</div>
+    <div className="footer-text">Made with <span role="img" aria-label="Blue heart emoji">💙</span> in Berlin using Gatsby</div>
     <ul className="footer-links resetList">
       <li className="footer-link">
         <a href="https://github.com/petterastedt/petterastedt.com" target="_blank" alt="Link to github repo" rel="noopener noreferrer">Repo</a>
