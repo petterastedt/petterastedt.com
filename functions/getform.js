@@ -4,6 +4,11 @@ exports.handler = async (event, context, callback) => {
   const pass = (body) => {
     callback(null, {
       statusCode: 200,
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Headers':
+          'Origin, X-Requested-With, Content-Type, Accept'
+      },
       body: JSON.stringify(body)
     })
   }
@@ -14,11 +19,12 @@ exports.handler = async (event, context, callback) => {
   })
   .then(data => {
     pass(data)
+    console.log(data)
   })
   .catch(error => {
     let errorMsg = {
-      statusCode: err.statusCode || 500,
-      body: JSON.stringify({error: err.message}
+      statusCode: error.statusCode || 500,
+      body: JSON.stringify({error: error.message}
     )}
 
     pass(errorMsg)
