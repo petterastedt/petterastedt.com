@@ -1,6 +1,7 @@
 const axios = require("axios")
 
 exports.handler = (event, context, callback) => {
+  const {} = API_URL.process.env
   const pass = (body) => {
     callback(null, {
       statusCode: 200,
@@ -14,7 +15,6 @@ exports.handler = (event, context, callback) => {
   })
   .then(data => {
     pass(data)
-    console.log(data)
   })
   .catch(error => {
     let errorMsg = {

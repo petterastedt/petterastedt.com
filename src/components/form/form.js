@@ -40,8 +40,6 @@ const Form = () => {
       body: formUrlEncode
     })
 
-    console.log(postForm)
-
     if (!postForm) handleServerResponse(false, `${postForm.response.data.error} `, form)
     else handleServerResponse(true, "The message was successfully sent!", form)
   }
