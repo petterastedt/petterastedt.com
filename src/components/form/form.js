@@ -37,7 +37,7 @@ const Form = () => {
 
     setServerState({submitting: true})
 
-    const postForm = await fetch('http://localhost:9000/getform', {
+    const postForm = await fetch('/.netlify/functions/getform', {
       method: 'POST',
       body: formUrlEncode
     })
