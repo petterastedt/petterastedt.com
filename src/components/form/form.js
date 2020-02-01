@@ -21,19 +21,28 @@ const Form = () => {
     if (ok) form.reset()
   }
 
+  const urlencodeFormData = (fd) => {
+    let params = new URLSearchParams()
+    for (var pair of fd.entries()) {
+        typeof pair[1]=='string' && params.append(pair[0], pair[1])
+    }
+    return params.toString()
+  }
+
   const handleOnSubmit = async e => {
     e.preventDefault()
-    const form = e.target;
+    const form = new FormData(e.target)
+
+    const formUrlEncode = urlencodeFormData(form)
 
     setServerState({submitting: true})
 
-    const postForm = await fetch('/.netlify/functions/getform', {
+    const postForm = await fetch('http://localhost:9000/getform', {
       method: 'POST',
-      body: new FormData(form),
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded'
-      }
+      body: formUrlEncode
     })
+
+    console.log(postForm)
 
     if (!postForm) handleServerResponse(false, `${postForm.response.data.error} `, form)
     else handleServerResponse(true, "The message was successfully sent!", form)

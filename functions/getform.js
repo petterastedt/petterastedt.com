@@ -1,4 +1,4 @@
-const fetch = require("node-fetch")
+const axios = require("axios")
 
 exports.handler = async (event, context, callback) => {
   const pass = (body) => {
@@ -8,24 +8,19 @@ exports.handler = async (event, context, callback) => {
     })
   }
 
-  try {
-    let response = await fetch("https://getform.io/f/fe0dc8a6-5e48-45f4-84c3-2f115ea31233", {
-      method: event.httpMethod,
-      body: event.body,
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded'
-      }
-    })
-
-    let data = await response.json()
-
+  axios("https://getform.io/f/fe0dc8a6-5e48-45f4-84c3-2f115ea31233", {
+    method: event.httpMethod,
+    data: event.body
+  })
+  .then(data => {
     pass(data)
-  } catch (err) {
-    let error = {
+  })
+  .catch(error => {
+    let errorMsg = {
       statusCode: err.statusCode || 500,
       body: JSON.stringify({error: err.message}
     )}
 
-    pass(error)
-  }
+    pass(errorMsg)
+  })
 }
