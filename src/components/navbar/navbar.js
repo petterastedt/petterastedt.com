@@ -6,7 +6,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`navbar box ${isExpanded && "navbar--isExpanded"}`}
+      className={`navbar ${isExpanded && "navbar--isExpanded"}`}
       onClick={() => !isExpanded && toggleExpanded()}
       onKeyDown={() => !isExpanded && toggleExpanded()}
     >
