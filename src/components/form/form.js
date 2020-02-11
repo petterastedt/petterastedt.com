@@ -96,7 +96,7 @@ const Form = () => {
             type="textarea"
             name="message"
             required="required"
-            placeholder="Hello Petter, lorem ipsum dolor..."
+            placeholder="Hello Petter..."
             id="message-input"
             onChange={(e) => {
               setInputData({

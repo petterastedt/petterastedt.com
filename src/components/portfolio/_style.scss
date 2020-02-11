@@ -26,6 +26,30 @@
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 80px;
+
+    .javascript {
+      box-shadow: 5px 6px 0px 0px rgba(236, 214, 66, 1);
+    }
+
+    .css {
+      box-shadow: 5px 6px 0px 0px rgba(14, 87, 167, 1);
+    }
+
+    .react {
+      box-shadow: 5px 6px 0px 0px rgba(71, 153, 255, 1);
+    }
+
+    .node {
+      box-shadow: 5px 6px 0px 0px rgba(65, 232, 108, 1);
+    }
+
+    .mongodb {
+      box-shadow: 5px 6px 0px 0px rgba(105, 178, 64, 1);
+    }
+
+    .gatsby {
+      box-shadow: 5px 6px 0px 0px rgba(201, 71, 255, 1);
+    }
   }
 
   .category-btn {

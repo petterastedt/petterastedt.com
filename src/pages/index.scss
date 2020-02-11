@@ -6,6 +6,7 @@
 @import '../components/intro/style';
 @import '../components/portfolio/style';
 @import '../components/resume/style';
+@import '../components/quote/style';
 @import '../components/form/style';
 @import '../components/footer/style';
 
@@ -75,7 +76,7 @@ a {
 
 .box {
   border: 2px solid;
-  box-shadow: 5px 6px 0px 0px rgba(50, 50, 50, 1);
+  box-shadow: 5px 6px 0px 0px rgba(0, 0, 0, 1);
 }
 
 .resetList {
@@ -113,10 +114,10 @@ button {
 }
 
 .button-noHover {
-  box-shadow: none;
   cursor: auto;
 
   &:hover {
+    box-shadow: 5px 6px 0px 0px rgba(0, 0, 0, 1);
     transform: none;
   }
 }

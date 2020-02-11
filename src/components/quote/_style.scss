@@ -1,0 +1,23 @@
+.quote {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font-size: $font-size-medium-mobile;
+  outline: none;
+  text-align: center;
+
+  @media (min-width: $breakpoint-tablet) {
+    font-size: 26px;
+    margin: 0 70px;
+  }
+
+  &-author {
+    font-size: $font-size-small-mobile;
+    font-weight: 800;
+    margin-top: 20px;
+
+    @media (min-width: $breakpoint-tablet) {
+      font-size: $font-size-small;
+    }
+  }
+}

@@ -14,14 +14,14 @@ const Portfolio = () => {
         </div>
       </div>
       <div className="buttons">
-        <button className="category-btn box button-noHover">Javascript ES6+</button>
-        <button className="category-btn box button-noHover">CSS/SCSS</button>
-        <button className="category-btn box button-noHover">React</button>
-        <button className="category-btn box button-noHover">Node.js</button>
-        <button className="category-btn box button-noHover">Express</button>
-        <button className="category-btn box button-noHover">MongoDb</button>
-        <button className="category-btn box button-noHover">Gatsby</button>
-        <button className="category-btn box button-noHover">Next.js</button>
+        <button className="category-btn javascript box button-noHover">Javascript ES6+</button>
+        <button className="category-btn css box button-noHover">CSS/SCSS</button>
+        <button className="category-btn react box button-noHover">React</button>
+        <button className="category-btn node box button-noHover">Node.js</button>
+        <button className="category-btn express box button-noHover">Express</button>
+        <button className="category-btn mongodb box button-noHover">MongoDb</button>
+        <button className="category-btn gatsby box button-noHover">Gatsby</button>
+        <button className="category-btn next box button-noHover">Next.js</button>
       </div>
       <div className="projectWrapper">
         <ul className="list resetList">
