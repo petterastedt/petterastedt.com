@@ -67,7 +67,7 @@ const Portfolio = () => {
                           alt="Link to github"
                           target="_blank"
                           rel="noopener noreferrer">GITHUB</a>
-                      : <strike>GITHUB SITE</strike>
+                      : <strike>GITHUB</strike>
                       }
                       </li>
                       <span className="separator">-</span>
