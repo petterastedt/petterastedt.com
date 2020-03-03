@@ -52,7 +52,7 @@ const Portfolio = () => {
             `}
             render={ data => (
               data.allMarkdownRemark.edges.map(project => (
-                <li className="list-item box" key={project.node.id}>
+                <li className="list-item box" key={project.node.id} data-aos="fade-up">
                   <Img fluid={project.node.frontmatter.featuredImage.childImageSharp.fluid} className="image" alt="Project preview"/>
                   <div className={`label ${!project.node.frontmatter.gitHubLink && !project.node.frontmatter.liveLink && "label--isVisible"}`}>UNDER DEVELOPMENT</div>
                   <div className="content">

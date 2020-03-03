@@ -11,6 +11,15 @@
     margin: 0 70px;
   }
 
+  &-toggle {
+    font-size: $font-size-small-mobile;
+    font-weight: bold;
+
+    @media (min-width: $breakpoint-tablet) {
+      font-size: 20px;
+    }
+  }
+
   &-author {
     font-size: $font-size-small-mobile;
     font-weight: 800;
