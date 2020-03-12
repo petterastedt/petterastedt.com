@@ -14,7 +14,7 @@ import '../../node_modules/aos/dist/aos.css'
 export default () => {
   useEffect(() => {
     AOS.init({
-      duration: 600
+      duration: 700
     })
   }, [])
 

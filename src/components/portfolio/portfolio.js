@@ -55,6 +55,7 @@ const Portfolio = () => {
                 <li className="list-item box" key={project.node.id} data-aos="fade-up">
                   <Img fluid={project.node.frontmatter.featuredImage.childImageSharp.fluid} className="image" alt="Project preview"/>
                   <div className={`label ${!project.node.frontmatter.gitHubLink && !project.node.frontmatter.liveLink && "label--isVisible"}`}>UNDER DEVELOPMENT</div>
+                  <div className={`label ${project.node.frontmatter.liveLink === "https://futuritytimecapsule.herokuapp.com/" && "label--isVisible"}`}>TEST VERSION ONLINE</div>
                   <div className="content">
                     <div className="content-wrapper">
                       <h3 className="content-title">{project.node.frontmatter.title}</h3>
