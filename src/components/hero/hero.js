@@ -3,7 +3,7 @@ import React from 'react'
 const Hero = () => (
   <div className="hero">
     <div className="content">
-      <h1 className="content-title h2">Hi, I’m <strong>Petter</strong>, <span className="emoji" role="img" aria-label="Waving hand">👋</span>
+      <h1 className="content-title h2">Hi, I’m <strong>Petter</strong> <span className="emoji" role="img" aria-label="Waving hand">👋</span>
         <br />
         I’m a Swedish frontend web developer based in <strong>Berlin.</strong>
       </h1>

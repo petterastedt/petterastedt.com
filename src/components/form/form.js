@@ -57,7 +57,7 @@ const Form = () => {
   return (
     <div className="form componentSpacing" id="contact">
       <h2>CONTACT</h2>
-      <form onSubmit={handleOnSubmit}>
+      <form onSubmit={handleOnSubmit} aria-label="Contact form">
         <label htmlFor="email-input">Your email:</label>
         <div className="input-wrapper">
           <input
