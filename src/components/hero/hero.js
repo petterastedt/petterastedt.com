@@ -1,20 +1,28 @@
 import React from 'react'
+import image from './../../assets/images/petter_undraw.svg'
 
-const Hero = () => (
+const Hero = ({data}) => (
   <div className="hero">
     <div className="content">
-      <h1 className="content-title h2">Hi, I’m <strong>Petter</strong> <span className="emoji" role="img" aria-label="Waving hand">👋</span>
-        <br />
-        I’m a Swedish frontend web developer based in <strong>Berlin.</strong>
-      </h1>
-      <div className="content-divider"></div>
-      <p className="content-subtitle">
-        Currently developing high quality components @ <a href="https://bleech.de/en/" target="_blank" alt="Link to bleech.de"  rel="noopener noreferrer" className="linkSpecial">bleech</a>.
-      </p>
+      { !data.hideBackgroundImage &&
+        <img src={image} 
+        alt="Header background"
+        className="svgImage" />
+      }
+      <div className="content-upper"
+        dangerouslySetInnerHTML={{ __html: data.headerWysiwyg }}>
+      </div>
+        {data.separator &&
+          <div className="content-divider"></div>
+        }
+      <div className="content-lower"
+        dangerouslySetInnerHTML={{ __html: data.headerLower }}>
+      </div>
       <div className="buttonWrapper">
-        <button className="button box"><a href="#intro">Learn more</a></button>
-    </div>
+        <button className="button box"><a href="#intro">{data.buttonText}</a></button>
+      </div>
     </div>
   </div>
 )
+
 export default Hero

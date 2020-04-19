@@ -36,25 +36,24 @@ body {
 
 h1,
 .h1 {
-  font-size: $font-size-big-mobile;
   font-weight: 500;
   margin: 0  0 20px 0;
   padding: 0;
-
-  @media (min-width: $breakpoint-tablet-horizontal) {
-    font-size: $font-size-big;
-  }
 }
 
 h2,
 .h2 {
-  font-size: 40px;
+  font-size: $font-size-big-mobile;
   font-weight: 700;
   margin: 0 0 60px 0;
   padding: 0;
 
   @media (min-width: $breakpoint-tablet-horizontal) {
-    font-size: 52px;
+    font-size: $font-size-tablet;
+  }
+
+  @media (min-width: $breakpoint-desktop-wide) {
+    font-size: $font-size-big;
   }
 }
 
@@ -93,6 +92,7 @@ a {
   }
 }
 
+.badge,
 .button,
 button {
   background-color: transparent;
@@ -131,3 +131,4 @@ button {
     text-decoration: none;
   }
 }
+

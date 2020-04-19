@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Form = () => {
+const Form = ({data}) => {
   const [serverState, setServerState] = useState({
     submitting: false,
     status: null
@@ -56,9 +56,11 @@ const Form = () => {
 
   return (
     <div className="form componentSpacing" id="contact">
-      <h2>CONTACT</h2>
+      <div className="form-title"
+        dangerouslySetInnerHTML={{ __html: data.formTitle }}>
+      </div>
       <form onSubmit={handleOnSubmit} aria-label="Contact form">
-        <label htmlFor="email-input">Your email:</label>
+        <label htmlFor="email-input">{data.email}</label>
         <div className="input-wrapper">
           <input
             className="box"
@@ -71,7 +73,7 @@ const Form = () => {
             <div className={`cross ${inputData.email === false && "cross--isVisible"}`}>+</div>
           </div>
 
-        <label htmlFor="subject-input">Subject:</label>
+        <label htmlFor="subject-input">{data.subject}</label>
         <div className="input-wrapper">
           <input
             className="box"
@@ -89,14 +91,14 @@ const Form = () => {
             <div className={`check ${inputData.subject && inputData.subject.length > 0 && "check--isVisible"}`}></div>
           </div>
 
-        <label htmlFor="subject-input">Message:</label>
+        <label htmlFor="subject-input">{data.message}</label>
         <div className="input-wrapper input-message">
           <textarea
             className="box"
             type="textarea"
             name="message"
             required="required"
-            placeholder="Hello Petter..."
+            placeholder={data.placeholder}
             id="message-input"
             onChange={(e) => {
               setInputData({
@@ -113,7 +115,7 @@ const Form = () => {
             type="submit"
             className="box"
             disabled={serverState.status || serverState.submitting ? true : false}
-            >SEND</button>
+            >{data.buttonLabel}</button>
           { serverState.status && <span className="response">{ serverState.status.msg }</span>}
         </div>
       </form>
