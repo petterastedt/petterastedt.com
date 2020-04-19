@@ -2,7 +2,11 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  padding: 20px 0 50px; // change to 125px?
+  padding: 20px 0 115px;
+
+  @media (min-width: $breakpoint-tablet) {
+    padding-bottom: 20px;
+  }
 
   @media (min-width: $breakpoint-desktop) {
     padding: 40px 0 0;
@@ -13,26 +17,55 @@
   }
 
   .content {
-    margin: 0 auto;
+    align-self: flex-start;
+    position: relative;
+    width: 100%;
+
+    img {
+      bottom: -100px;
+      height: 160px;
+      position: absolute;
+      right: 0;
+      z-index: -99;
+
+      @media (min-width: $breakpoint-tablet) {
+        height: 115%;
+        top: -42px;
+        right: -60px;
+      }
+    }
 
     &-title {
       font-weight: 500;
       margin: 0;
+      width: 100%;
 
       @media (max-width: $breakpoint-mobile-horizontal - 1) {
         font-size: 34px;
+      }
+
+      @media (min-width: $breakpoint-tablet) {
+        max-width: 87%;
+      }
+
+      @media (min-width: $breakpoint-desktop) {
+        max-width: 900px;
       }
     }
 
     &-divider {
       align-self: flex-start;
       background-color: $color-accent-dark;
-      height: 3px;
+      height: 2px;
       margin: 40px 0;
-      width: 40px;
+      width: 110px;
 
       @media (min-width: $breakpoint-mobile-horizontal) {
         width: 130px;
+      }
+
+      @media (min-width: $breakpoint-desktop-wide) {
+        height: 3px;
       }
     }
 
@@ -43,6 +76,14 @@
       @media (min-width: $breakpoint-mobile-horizontal) {
         font-size: $font-size-medium-mobile;
       }
+
+      @media (min-width: $breakpoint-tablet) {
+        max-width: 85%;
+      }
+
+      @media (min-width: $breakpoint-desktop) {
+        max-width: 950px;
+      }
     }
 
     .buttonWrapper {
@@ -50,11 +91,8 @@
       justify-content: flex-start;
       margin-top: 40px;
 
-      @media (min-width: $breakpoint-mobile-horizontal) {
-        justify-content: flex-end;
-      }
-
       button {
+        background: $color-white;
         padding: 7px 12px;
       }
     }

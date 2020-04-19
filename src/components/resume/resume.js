@@ -1,21 +1,19 @@
 import React from 'react'
-import resume from './../../assets/images/resume.jpg'
-import pdf from "./../../assets/files/cv_petterastedt.pdf"
+import Img from "gatsby-image"
 
-const Resume = () => (
+const Resume = ({data}) => (
   <div className="resume componentSpacing" id="resume" data-aos="fade-up">
     <div className="content">
-      <div className="content-text">
-        <h2>DOWNLOAD CV</h2>
-        <p>
-        Did you know that I'm a certified ski- and snowboarding instructor? Head over to <a href="https://www.linkedin.com/in/petterastedt/" target="_blank" alt="Link to LinkedIn"  rel="noopener noreferrer" className="linkSpecial">linkedin</a> and see what else I did before I became a web developer. If you want a more concise overview of my recent studies and work experience, downloading my CV would be a good place to start.
-        </p>
+      <div className="content-text"
+        dangerouslySetInnerHTML={{ __html: data.resumeIntro }}>
       </div>
-      <a href={pdf} alt="Download resume">
+      <a href={data.pdf.mediaItemUrl} alt="Download resume">
         <div className="content-image box">
-          <img src={resume} className="image" alt="Resume preview"/>
+          <Img fluid={data.image.imageFile.childImageSharp.fluid}
+            className="image" 
+            alt="Resume preview"/>
           <div className="linkWrapper">
-            <span>DOWNLOAD PDF (188KB)</span>
+            <span>{data.downloadLabel}</span>
           </div>
         </div>
       </a>
