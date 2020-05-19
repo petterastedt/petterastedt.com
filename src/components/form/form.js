@@ -91,7 +91,7 @@ const Form = ({data}) => {
             <div className={`check ${inputData.subject && inputData.subject.length > 0 && "check--isVisible"}`}></div>
           </div>
 
-        <label htmlFor="subject-input">{data.message}</label>
+        <label htmlFor="message-input">{data.message}</label>
         <div className="input-wrapper input-message">
           <textarea
             className="box"
