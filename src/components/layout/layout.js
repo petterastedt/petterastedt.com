@@ -7,11 +7,11 @@ const Layout = props => {
   return (
     <div className="layout">
       <Helmet
-        title='Petter Åstedt - Frontend web developer'
+        title='Petter Åstedt - Frontend Web Developer'
         meta={[
           {
             name: 'description',
-            content: 'Petter Åstedt official website',
+            content: 'Petter Åstedt Portfolio Website',
           },
           { name: 'keywords', content: 'Web developer, Petter Åstedt, Portfolio,' },
         ]}
