@@ -35,7 +35,8 @@
       box-shadow: 5px 6px 0px 0px rgba(14, 87, 167, 1);
     }
 
-    .react {
+    .react,
+    .typescript {
       box-shadow: 5px 6px 0px 0px rgba(71, 153, 255, 1);
     }
 
@@ -86,11 +87,20 @@
       position: relative;
     }
 
+    &-imageLink {
+      overflow: hidden;
+    }
+
     .image {
       background-color: red;
       height: auto;
       object-fit: cover;
+      transition: transform 0.6s ease-in-out;
       width: 100%;
+
+      &:hover {
+        transform: scale(1.05);
+      }
     }
 
     .label {

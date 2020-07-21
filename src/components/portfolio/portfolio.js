@@ -19,14 +19,26 @@ const Portfolio = ({data, projects}) => {
         <ul className="list resetList">
           { projects.map((item, index) => (
             <li className="list-item box" key={index} data-aos="fade-up">
-              <Img fluid={item.project.previewImage.imageFile.childImageSharp.fluid}
-                className="image"
-                alt="Project preview"/>
+              <a href={item.project.liveLink ? item.project.liveLink : item.project.githubLink}
+                className="list-imageLink"
+                alt="Link to live site"
+                target="_blank"
+                rel="noopener noreferrer">
+                <Img fluid={item.project.previewImage.imageFile.childImageSharp.fluid}
+                  className="image"
+                  alt="Project preview"/>
+              </a>
               <div className={`label ${!item.project.githubLink && !item.project.liveLink && "label--isVisible"}`}>UNDER DEVELOPMENT</div>
               <div className={`label ${item.project.liveLink === "https://futuritytimecapsule.herokuapp.com/" && "label--isVisible"}`}>TEST VERSION ONLINE</div>
               <div className="content">
                 <div className="content-wrapper">
-                  <h3 className="content-title">{item.project.title}</h3>
+                  <a href={item.project.liveLink ? item.project.liveLink : item.project.githubLink}
+                    className="list-imageLink"
+                    alt="Link to live site"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    <h3 className="content-title">{item.project.title}</h3>
+                  </a>
                   <p className="content-excerpt">{item.project.excerpt}</p>
                 </div>
                 <ul className="content-links resetList">
