@@ -3,7 +3,7 @@
   display: flex;
   font-size: $font-size-small;
   justify-content: space-between;
-  margin: 20px 0 30px;
+  margin: 20px 0 40px;
   padding: 0;
   transition: 0.3s width ease-in-out;
 
@@ -15,6 +15,7 @@
   @media (min-width: $breakpoint-tablet) {
     cursor: auto;
     flex-direction: row;
+    margin: 20px 0 30px;
     width: unset;
   }
 
