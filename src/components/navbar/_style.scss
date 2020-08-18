@@ -15,6 +15,7 @@
   @media (min-width: $breakpoint-tablet) {
     cursor: auto;
     flex-direction: row;
+    margin: 20px 0 30px;
     width: unset;
   }
 
@@ -82,10 +83,6 @@
     font-weight: 800;
     letter-spacing: 2px;
     text-transform: uppercase;
-
-    @media (min-width: $breakpoint-mobile-horizontal) {
-      font-size: $font-size-small;
-    }
 
     &:hover {
       text-decoration: underline;
