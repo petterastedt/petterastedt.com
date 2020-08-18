@@ -3,7 +3,7 @@
   display: flex;
   font-size: $font-size-small;
   justify-content: space-between;
-  margin: 20px 0 40px;
+  margin: 20px 0 30px;
   padding: 0;
   transition: 0.3s width ease-in-out;
 
@@ -82,10 +82,6 @@
     font-weight: 800;
     letter-spacing: 2px;
     text-transform: uppercase;
-
-    @media (min-width: $breakpoint-mobile-horizontal) {
-      font-size: $font-size-small;
-    }
 
     &:hover {
       text-decoration: underline;
