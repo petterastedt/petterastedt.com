@@ -19,10 +19,10 @@ const Form = ({data}) => {
     })
   }
 
-  const urlencodeFormData = (fd) => {
+  const urlencodeFormData = fd => {
     let params = new URLSearchParams()
     for (var pair of fd.entries()) {
-        typeof pair[1]=='string' && params.append(pair[0], pair[1])
+      typeof pair[1]=='string' && params.append(pair[0], pair[1])
     }
     return params.toString()
   }
@@ -69,9 +69,9 @@ const Form = ({data}) => {
             required="required"
             id="email-input"
             onBlur={(e) => checkEmail(e)}/>
-            <div className={`check ${inputData.email && "check--isVisible"}`}></div>
-            <div className={`cross ${inputData.email === false && "cross--isVisible"}`}>+</div>
-          </div>
+          <div className={`check ${inputData.email && "check--isVisible"}`}></div>
+          <div className={`cross ${inputData.email === false && "cross--isVisible"}`}>+</div>
+        </div>
 
         <label htmlFor="subject-input">{data.subject}</label>
         <div className="input-wrapper">
@@ -87,9 +87,9 @@ const Form = ({data}) => {
                 subject: e.target.value,
                 message: inputData.message
               })
-            }} />
-            <div className={`check ${inputData.subject && inputData.subject.length > 0 && "check--isVisible"}`}></div>
-          </div>
+            }}/>
+          <div className={`check ${inputData.subject && inputData.subject.length > 3 && "check--isVisible"}`}></div>
+        </div>
 
         <label htmlFor="message-input">{data.message}</label>
         <div className="input-wrapper input-message">
@@ -107,8 +107,8 @@ const Form = ({data}) => {
                 message: e.target.value
               })
             }} />
-            <div className={`check ${inputData.message && inputData.message.length > 0 && "check--isVisible"}`}></div>
-          </div>
+          <div className={`check ${inputData.message && inputData.message.length > 10 && "check--isVisible"}`}></div>
+        </div>
 
         <div className="buttonWrapper">
           <button
