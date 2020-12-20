@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { graphql } from 'gatsby'
 import './index.scss'
 import Layout from '../components/layout/layout'
@@ -12,18 +12,26 @@ import AOS from 'aos'
 import '../../node_modules/aos/dist/aos.css'
 
 export default ({data, location}) => {
-  let lang
-  if (location.href) {
-    lang = location.href.includes(".se") ? 0 : 1 // SET LANGUAGE (0 = SWEDISH, 1 = ENGLISH)
-  } else {
-    lang = 1
-  }
+  const [lang, setLang] = useState(1)
 
   useEffect(() => {
+    setLanguage()
+
     AOS.init({
       duration: 700
     })
   }, [])
+
+  setLanguage = () => {
+    let languageCode
+    if (location.href) {
+      languageCode = location.href.includes(".se") ? 0 : 1 // SET LANGUAGE (0 = SWEDISH, 1 = ENGLISH)
+    } else {
+      languageCode = 1
+    }
+
+    setLang(languageCode)
+  }
 
   return (
     <div>
