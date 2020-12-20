@@ -12,15 +12,16 @@ import AOS from 'aos'
 import '../../node_modules/aos/dist/aos.css'
 
 export default ({data}) => {
-  let lang = 1
-  if (typeof window !== `undefined`) {
-    lang = window.location.href.includes(".se") ? 0 : 1 // SET LANGUAGE (0 = SWEDISH, 1 = ENGLISH)
-  }
+  let lang
 
   useEffect(() => {
     AOS.init({
       duration: 700
     })
+
+    if (typeof window !== `undefined`) {
+      lang = window.location.href.includes(".se") ? 0 : 1 // SET LANGUAGE (0 = SWEDISH, 1 = ENGLISH)
+    }
   }, [])
 
   return (
