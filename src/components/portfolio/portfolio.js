@@ -2,6 +2,8 @@ import React from 'react';
 import Img from "gatsby-image"
 
 const Portfolio = ({data, projects}) => {
+  console.log(projects)
+  console.log(data)
   return (
     <div className="portfolio componentSpacing" id="portfolio">
       <div className="content">
@@ -39,6 +41,13 @@ const Portfolio = ({data, projects}) => {
                     rel="noopener noreferrer">
                     <h3 className="content-title">{item.project.title}</h3>
                   </a>
+                  <ul className="content-tags resetList">
+                  { item.project.technologiesUsed &&
+                    item.project.technologiesUsed.map((technology, index) => (
+                    <li className="content-tags-item" key={index}>{ technology }</li>
+                    ))
+                  }
+                  </ul>
                   <p className="content-excerpt">{item.project.excerpt}</p>
                 </div>
                 <ul className="content-links resetList">

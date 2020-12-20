@@ -127,6 +127,7 @@ export const query = graphql`
             githubLink
             liveLink
             title
+            technologiesUsed
           }
         }
       }
