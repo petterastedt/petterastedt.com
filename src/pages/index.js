@@ -13,7 +13,11 @@ import '../../node_modules/aos/dist/aos.css'
 
 export default ({data, location}) => {
   let lang
-  lang = location.href.includes(".se") ? 0 : 1 // SET LANGUAGE (0 = SWEDISH, 1 = ENGLISH)
+  if (location) {
+    lang = location.href.includes(".se") ? 0 : 1 // SET LANGUAGE (0 = SWEDISH, 1 = ENGLISH)
+  } else {
+    lang = 1
+  }
 
   useEffect(() => {
     AOS.init({
