@@ -12,4 +12,8 @@
   @media (min-width: $breakpoint-tablet-horizontal) {
     padding: 0 $gutter-desktop;
   }
+
+  @media (min-width: $breakpoint-desktop-wide) {
+    padding: 0 $gutter-desktop-wide;
+  }
 }
