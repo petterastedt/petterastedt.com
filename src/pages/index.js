@@ -13,7 +13,7 @@ import '../../node_modules/aos/dist/aos.css'
 
 export default ({data, location}) => {
   let lang
-  if (location) {
+  if (location.href) {
     lang = location.href.includes(".se") ? 0 : 1 // SET LANGUAGE (0 = SWEDISH, 1 = ENGLISH)
   } else {
     lang = 1
