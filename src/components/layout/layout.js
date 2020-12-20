@@ -3,29 +3,28 @@ import Helmet from 'react-helmet'
 import Navbar from '../navbar/navbar'
 import Footer from '../footer/footer'
 
-const Layout = props => {
-  return (
-    <div className="layout">
-      <Helmet
-        title='Petter Åstedt - Frontend Web Developer'
-        meta={[
-          {
-            name: 'description',
-            content: 'Petter Åstedt Portfolio Website',
-          },
-          { name: 'keywords', content: 'Web developer, Petter Åstedt, Portfolio,' },
-        ]}
-      />
-      <Navbar
-        data={props.data}/>
+const Layout = ({ data, language, footerData, children }) => (
+  <div className="layout">
+    <Helmet
+      title='Petter Åstedt - Frontend Web Developer'
+      meta={[
+        {
+          name: 'description',
+          content: 'Petter Åstedt Portfolio Website',
+        },
+        { name: 'keywords', content: 'Web developer, Petter Åstedt, Portfolio,' },
+      ]}
+    />
+    <Navbar
+      data={data}
+      language={language}/>
 
-      {props.children}
+    {children}
 
-      <Footer
-        data={props.data}
-        footerData={props.footerData}/>
-    </div>
-  )
-}
+    <Footer
+      data={data}
+      footerData={footerData}/>
+  </div>
+)
 
 export default Layout

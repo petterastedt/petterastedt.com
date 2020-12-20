@@ -12,6 +12,8 @@ import AOS from 'aos'
 import '../../node_modules/aos/dist/aos.css'
 
 export default ({data}) => {
+  const lang = window.location.href.includes(".se") ? 0 : 1 // SET LANGUAGE (0 = SWEDISH, 1 = ENGLISH)
+
   useEffect(() => {
     AOS.init({
       duration: 700
@@ -22,20 +24,21 @@ export default ({data}) => {
     <div>
       <Layout
         data={data.wpgraphql.menus.edges}
-        footerData={data.wpgraphql.pages.edges[0].node.footer}>
+        footerData={data.wpgraphql.pages.edges[lang].node.footer}
+        language={lang}>
         <Hero
-          data={data.wpgraphql.pages.edges[0].node.header}/>
+          data={data.wpgraphql.pages.edges[lang].node.header}/>
         <Intro
-          data={data.wpgraphql.pages.edges[0].node.intro}/>
+          data={data.wpgraphql.pages.edges[lang].node.intro}/>
         <Portfolio
-          data={data.wpgraphql.pages.edges[0].node.projects}
+          data={data.wpgraphql.pages.edges[lang].node.projects}
           projects={data.wpgraphql.projects.nodes}/>
         <Resume
-          data={data.wpgraphql.pages.edges[0].node.resume}/>
+          data={data.wpgraphql.pages.edges[lang].node.resume}/>
         <Quote
-          data={data.wpgraphql.pages.edges[0].node.quote}/>
+          data={data.wpgraphql.pages.edges[lang].node.quote}/>
         <Form
-          data={data.wpgraphql.pages.edges[0].node.form}/>
+          data={data.wpgraphql.pages.edges[lang].node.form}/>
       </Layout>
     </div>
   )
