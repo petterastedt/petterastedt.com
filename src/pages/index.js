@@ -11,16 +11,11 @@ import Form from '../components/form/form'
 import AOS from 'aos'
 import '../../node_modules/aos/dist/aos.css'
 
-export default ({data}) => {
+export default ({data, location}) => {
   let lang
+  lang = location.href.includes(".se") ? 0 : 1 // SET LANGUAGE (0 = SWEDISH, 1 = ENGLISH)
 
   useEffect(() => {
-    if (typeof window !== `undefined`) {
-      lang = window.location.href.includes("se") ? 0 : 1 // SET LANGUAGE (0 = SWEDISH, 1 = ENGLISH)
-    } else {
-      lang = 1
-    }
-
     AOS.init({
       duration: 700
     })
