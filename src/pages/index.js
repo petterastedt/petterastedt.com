@@ -12,7 +12,7 @@ import AOS from 'aos'
 import '../../node_modules/aos/dist/aos.css'
 
 export default ({data}) => {
-  let lang
+  let lang = 1
 
   useEffect(() => {
     AOS.init({
