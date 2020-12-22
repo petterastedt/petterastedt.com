@@ -14,6 +14,8 @@ import '../../node_modules/aos/dist/aos.css'
 export default ({data, location}) => {
   const [lang, setLang] = useState(1)
 
+  console.log(data.wpgraphql.projects.nodes)
+
   useEffect(() => {
     setLanguage()
 
@@ -25,7 +27,7 @@ export default ({data, location}) => {
   const setLanguage = () => {
     let languageCode
     if (location.href) {
-      languageCode = location.href.includes(".se") ? 0 : 1 // SET LANGUAGE (0 = SWEDISH, 1 = ENGLISH)
+      languageCode = location.href.includes("local") ? 0 : 1 // SET LANGUAGE (0 = SWEDISH, 1 = ENGLISH)
     } else {
       languageCode = 1
     }
@@ -45,7 +47,8 @@ export default ({data, location}) => {
           data={data.wpgraphql.pages.edges[lang].node.intro}/>
         <Portfolio
           data={data.wpgraphql.pages.edges[lang].node.projects}
-          projects={data.wpgraphql.projects.nodes}/>
+          projects={data.wpgraphql.projects.nodes}
+          language={lang}/>
         <Resume
           data={data.wpgraphql.pages.edges[lang].node.resume}/>
         <Quote
@@ -140,6 +143,7 @@ export const query = graphql`
               }
             }
             excerpt
+            excerptSwedish
             githubLink
             liveLink
             title

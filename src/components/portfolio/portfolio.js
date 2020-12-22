@@ -1,7 +1,7 @@
 import React from 'react';
 import Img from "gatsby-image"
 
-const Portfolio = ({data, projects}) => (
+const Portfolio = ({data, projects, language}) => (
   <div className="portfolio componentSpacing" id="portfolio">
     <div className="content">
       <div className="content-text"
@@ -45,7 +45,7 @@ const Portfolio = ({data, projects}) => (
                   ))
                 }
                 </ul>
-                <p className="content-excerpt">{item.project.excerpt}</p>
+                <p className="content-excerpt">{language === 0 ? item.project.excerptSwedish : item.project.excerpt}</p>
               </div>
               <ul className="content-links resetList">
                 <li className="content-linkItem">
