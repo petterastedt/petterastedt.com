@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 
 const Form = ({data}) => {
   const [serverState, setServerState] = useState({
@@ -12,7 +12,7 @@ const Form = ({data}) => {
     message: null
   })
 
-  const handleServerResponse = (ok, msg, form) => {
+  const handleServerResponse = (ok, msg) => {
     setServerState({
       submitting: false,
       status: { ok, msg }
@@ -40,17 +40,19 @@ const Form = ({data}) => {
       body: formUrlEncode
     })
 
-    if (!postForm) handleServerResponse(false, `${postForm.response.data.error} `, form)
-    else handleServerResponse(true, "The message was successfully sent!", form)
+    if (postForm) {
+      handleServerResponse(true, "The message was successfully sent!", form)
+    } else {
+      handleServerResponse(false, `${postForm.response.data.error} `, form)
+    }
   }
 
   const checkEmail = e => {
-    const passed = /\S+@\S+\.\S+/.test(e.target.value)
+    const hasPassed = /\S+@\S+\.\S+/.test(e.target.value)
 
     setInputData({
-      email: passed,
-      subject: inputData.subject,
-      message: inputData.message,
+      ...inputData,
+      email: hasPassed,
     })
   }
 
@@ -68,7 +70,8 @@ const Form = ({data}) => {
             name="email"
             required="required"
             id="email-input"
-            onBlur={(e) => checkEmail(e)}/>
+            onBlur={(e) => checkEmail(e)}
+          />
           <div className={`check ${inputData.email && "check--isVisible"}`}></div>
           <div className={`cross ${inputData.email === false && "cross--isVisible"}`}>+</div>
         </div>
@@ -83,11 +86,11 @@ const Form = ({data}) => {
             id="subject-input"
             onChange={(e) => {
               setInputData({
-                email: inputData.email,
+                ...inputData,
                 subject: e.target.value,
-                message: inputData.message
               })
-            }}/>
+            }}
+          />
           <div className={`check ${inputData.subject && inputData.subject.length > 3 && "check--isVisible"}`}></div>
         </div>
 
@@ -98,16 +101,17 @@ const Form = ({data}) => {
             type="textarea"
             name="message"
             required="required"
+            minLength="20"
             placeholder={data.placeholder}
             id="message-input"
             onChange={(e) => {
               setInputData({
-                email: inputData.email,
-                subject: inputData.subject,
+                ...inputData,
                 message: e.target.value
               })
-            }} />
-          <div className={`check ${inputData.message && inputData.message.length > 10 && "check--isVisible"}`}></div>
+            }}
+          />
+          <div className={`check ${inputData.message && inputData.message.length >= 20 && "check--isVisible"}`}></div>
         </div>
 
         <div className="buttonWrapper">

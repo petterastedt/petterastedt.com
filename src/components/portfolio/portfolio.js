@@ -51,9 +51,9 @@ const Portfolio = ({data, projects, language}) => (
                 <li className="content-linkItem">
                   { item.project.githubLink ?
                     <a href={item.project.githubLink}
-                        alt="Link to github"
-                        target="_blank"
-                        rel="noopener noreferrer">GITHUB</a>
+                      alt="Link to github"
+                      target="_blank"
+                      rel="noopener noreferrer">GITHUB</a>
                     : <strike className="strike">GITHUB</strike>
                   }
                 </li>
@@ -61,9 +61,9 @@ const Portfolio = ({data, projects, language}) => (
                 <li className="content-linkItem">
                   { item.project.liveLink ?
                     <a href={item.project.liveLink}
-                        alt="Link to live site"
-                        target="_blank"
-                        rel="noopener noreferrer">LIVE SITE</a>
+                      alt="Link to live site"
+                      target="_blank"
+                      rel="noopener noreferrer">LIVE SITE</a>
                   : <strike className="strike">LIVE SITE</strike>
                   }
                 </li>

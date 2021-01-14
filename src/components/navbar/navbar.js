@@ -16,7 +16,7 @@ const Navbar = ({data, language}) => {
       </div>
       <div className="navbar-title">{ language === 0 ? "https://www.petterastedt.se/" : "https://www.petterastedt.com/" }</div>
       <ul className={`list resetList ${!isExpanded && "list--isHidden"}`}>
-        {data[lang].node.menuItems.edges.map((item, index) => (
+        { data[lang].node.menuItems.edges.map((item, index) => (
           <li className="list-item" key={index}>
             <a href={item.node.url}
               className="list-itemLink">{item.node.label}</a>

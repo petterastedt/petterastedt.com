@@ -1,16 +1,17 @@
 $breakpoint-mobile-horizontal: 480px;
 $breakpoint-tablet: 768px;
 $breakpoint-tablet-horizontal: 1024px;
-$breakpoint-desktop: 1260px;
+$breakpoint-desktop: 1280px;
 $breakpoint-desktop-wide: 1440px;
 
 $component-max-width: 1280px;
+$component-max-width-narrow: 900px;
 $component-spacing: 160px;
 $component-spacing-mobile: 80px;
 
 $font-inconsolata: 'Inconsolata', monospace;
 $font-oswald: 'Oswald', sans-serif;
-$font-size-big: 50px;
+$font-size-big: 46px;
 $font-size-tablet: 43px;
 $font-size-big-mobile: 40px;
 $font-size-medium: 30px;
@@ -20,6 +21,7 @@ $font-size-small-mobile: 16px;
 
 $color-accent-dark: #1e3f5a;
 $color-accepted: #78b13f;
+$color-alert: #FF0000;
 $color-text: #000;
 $color-textFaded: #808080;
 $color-white: #fff;

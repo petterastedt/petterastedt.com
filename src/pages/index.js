@@ -14,8 +14,6 @@ import '../../node_modules/aos/dist/aos.css'
 export default ({data, location}) => {
   const [lang, setLang] = useState(1)
 
-  console.log(data.wpgraphql.projects.nodes)
-
   useEffect(() => {
     setLanguage()
 

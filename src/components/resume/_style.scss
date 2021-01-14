@@ -58,7 +58,7 @@
       }
 
       @media (min-width: $breakpoint-tablet-horizontal) {
-        margin-top: 0; 
+        margin-top: 0;
       }
 
       &:hover {
@@ -85,13 +85,9 @@
 
       span {
         font-family: $font-oswald;
-        font-size: 18px;
+        font-size: $font-size-small;
         font-weight: 800;
         margin: 35px auto 0;
-
-        @media (min-width: $breakpoint-mobile-horizontal) {
-          font-size: $font-size-small;
-        }
       }
     }
   }

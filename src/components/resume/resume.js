@@ -10,10 +10,10 @@ const Resume = ({data}) => (
       <a href={data.pdf.mediaItemUrl} alt="Download resume">
         <div className="content-image box">
           <Img fluid={data.image.imageFile.childImageSharp.fluid}
-            className="image" 
+            className="image"
             alt="Resume preview"/>
           <div className="linkWrapper">
-            <span>{data.downloadLabel}</span>
+            <span>{ data.downloadLabel }</span>
           </div>
         </div>
       </a>
