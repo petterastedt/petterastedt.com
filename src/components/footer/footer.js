@@ -7,7 +7,7 @@ const Footer = ({data, footerData}) => (
     </div>
     <ul className="footer-links resetList">
       { data[0].node.menuItems.edges.map((item, index) => (
-       <li className="footer-link" key={`Footer menu item ${index}`}>
+        <li className="footer-link" key={`Footer menu item ${index}`}>
           <a href={item.node.url} target="_blank" alt={`Link to ${item.node.label}`} rel="noopener noreferrer">{item.node.label}</a>
         </li>
       ))
