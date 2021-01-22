@@ -25,7 +25,7 @@ export default ({data, location}) => {
   const setLanguage = () => {
     let languageCode
     if (location.href) {
-      languageCode = location.href.includes("local") ? 0 : 1 // SET LANGUAGE (0 = SWEDISH, 1 = ENGLISH)
+      languageCode = location.href.includes(".se") ? 0 : 1 // SET LANGUAGE (0 = SWEDISH, 1 = ENGLISH)
     } else {
       languageCode = 1
     }
